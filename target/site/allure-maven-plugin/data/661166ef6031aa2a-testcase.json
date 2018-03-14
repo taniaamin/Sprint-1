@@ -1,0 +1,53 @@
+{
+  "uid" : "661166ef6031aa2a",
+  "name" : "Then I verify days of the week is displayed correctly on home page",
+  "title" : "Then I verify days of the week is displayed correctly on home page",
+  "time" : {
+    "start" : 1520898789077,
+    "stop" : 1520898789077,
+    "duration" : 0
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 0
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "testId" : null,
+  "suite" : {
+    "uid" : "752d9462c5c716a1",
+    "name" : "Verify weekly forecast days are displayed correctly",
+    "title" : "Verify weekly forecast days are displayed correctly"
+  },
+  "steps" : [ ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "Darksky home page"
+  }, {
+    "name" : "story",
+    "value" : "Verify weekly forecast days are displayed correctly"
+  }, {
+    "name" : "language",
+    "value" : "JAVA"
+  }, {
+    "name" : "suite-name",
+    "value" : "Verify weekly forecast days are displayed correctly"
+  }, {
+    "name" : "host",
+    "value" : "tanias-MBP.fios-router.home"
+  }, {
+    "name" : "suite-title",
+    "value" : "Verify weekly forecast days are displayed correctly"
+  }, {
+    "name" : "thread",
+    "value" : "1517@tanias-MBP.fios-router.home.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "CucumberJVM"
+  } ],
+  "parameters" : [ ]
+}

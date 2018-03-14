@@ -1,0 +1,49 @@
+{
+  "time" : {
+    "start" : 1520898788793,
+    "stop" : 1520898789077,
+    "duration" : 284
+  },
+  "testSuites" : [ {
+    "uid" : "752d9462c5c716a1",
+    "name" : "Verify weekly forecast days are displayed correctly",
+    "title" : "Verify weekly forecast days are displayed correctly",
+    "time" : {
+      "start" : 1520898788793,
+      "stop" : 1520898789077,
+      "duration" : 284
+    },
+    "statistic" : {
+      "total" : 2,
+      "passed" : 2,
+      "pending" : 0,
+      "canceled" : 0,
+      "failed" : 0,
+      "broken" : 0
+    },
+    "description" : null,
+    "testCases" : [ {
+      "uid" : "4f9df4b3f36fc146",
+      "name" : "Given I am on home page of Darksky",
+      "title" : "Given I am on home page of Darksky",
+      "time" : {
+        "start" : 1520898788793,
+        "stop" : 1520898788802,
+        "duration" : 9
+      },
+      "severity" : "NORMAL",
+      "status" : "PASSED"
+    }, {
+      "uid" : "661166ef6031aa2a",
+      "name" : "Then I verify days of the week is displayed correctly on home page",
+      "title" : "Then I verify days of the week is displayed correctly on home page",
+      "time" : {
+        "start" : 1520898789077,
+        "stop" : 1520898789077,
+        "duration" : 0
+      },
+      "severity" : "NORMAL",
+      "status" : "PASSED"
+    } ]
+  } ]
+}

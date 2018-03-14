@@ -1,0 +1,82 @@
+{
+  "time" : {
+    "start" : 1518107486965,
+    "stop" : 1518107488555,
+    "duration" : 1590
+  },
+  "testSuites" : [ {
+    "uid" : "d40e0255e1b809be",
+    "name" : "Verify Invalid Login",
+    "title" : "Verify Invalid Login",
+    "time" : {
+      "start" : 1518107486965,
+      "stop" : 1518107488555,
+      "duration" : 1590
+    },
+    "statistic" : {
+      "total" : 5,
+      "passed" : 5,
+      "pending" : 0,
+      "canceled" : 0,
+      "failed" : 0,
+      "broken" : 0
+    },
+    "description" : null,
+    "testCases" : [ {
+      "uid" : "e2eaf7254702b4dc",
+      "name" : "Given I am on home page",
+      "title" : "Given I am on home page",
+      "time" : {
+        "start" : 1518107486965,
+        "stop" : 1518107486968,
+        "duration" : 3
+      },
+      "severity" : "NORMAL",
+      "status" : "PASSED"
+    }, {
+      "uid" : "7e89010e2c5d38fe",
+      "name" : "When I enter mohammad@technosoftacademy.io into username text fields on home screen",
+      "title" : "When I enter mohammad@technosoftacademy.io into username text fields on home screen",
+      "time" : {
+        "start" : 1518107487367,
+        "stop" : 1518107487367,
+        "duration" : 0
+      },
+      "severity" : "NORMAL",
+      "status" : "PASSED"
+    }, {
+      "uid" : "6f94817254e0715e",
+      "name" : "And I enter test1234 into password text fields on home screen",
+      "title" : "And I enter test1234 into password text fields on home screen",
+      "time" : {
+        "start" : 1518107487462,
+        "stop" : 1518107487462,
+        "duration" : 0
+      },
+      "severity" : "NORMAL",
+      "status" : "PASSED"
+    }, {
+      "uid" : "650c39097fd7be44",
+      "name" : "And I click on login button on home screen",
+      "title" : "And I click on login button on home screen",
+      "time" : {
+        "start" : 1518107488513,
+        "stop" : 1518107488513,
+        "duration" : 0
+      },
+      "severity" : "NORMAL",
+      "status" : "PASSED"
+    }, {
+      "uid" : "f467c7bdf2f61c18",
+      "name" : "Then I verify that i am an invalid login page",
+      "title" : "Then I verify that i am an invalid login page",
+      "time" : {
+        "start" : 1518107488555,
+        "stop" : 1518107488555,
+        "duration" : 0
+      },
+      "severity" : "NORMAL",
+      "status" : "PASSED"
+    } ]
+  } ]
+}

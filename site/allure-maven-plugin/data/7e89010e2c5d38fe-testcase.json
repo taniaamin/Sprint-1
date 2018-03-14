@@ -1,0 +1,53 @@
+{
+  "uid" : "7e89010e2c5d38fe",
+  "name" : "When I enter mohammad@technosoftacademy.io into username text fields on home screen",
+  "title" : "When I enter mohammad@technosoftacademy.io into username text fields on home screen",
+  "time" : {
+    "start" : 1518107487367,
+    "stop" : 1518107487367,
+    "duration" : 0
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 0
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "testId" : null,
+  "suite" : {
+    "uid" : "d40e0255e1b809be",
+    "name" : "Verify Invalid Login",
+    "title" : "Verify Invalid Login"
+  },
+  "steps" : [ ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "Nazmuls-MacBook-Pro.local"
+  }, {
+    "name" : "suite-title",
+    "value" : "Verify Invalid Login"
+  }, {
+    "name" : "language",
+    "value" : "JAVA"
+  }, {
+    "name" : "thread",
+    "value" : "3523@Nazmuls-MacBook-Pro.local.main(1)"
+  }, {
+    "name" : "story",
+    "value" : "Verify Invalid Login"
+  }, {
+    "name" : "suite-name",
+    "value" : "Verify Invalid Login"
+  }, {
+    "name" : "framework",
+    "value" : "CucumberJVM"
+  }, {
+    "name" : "feature",
+    "value" : "Login feature"
+  } ],
+  "parameters" : [ ]
+}

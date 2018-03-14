@@ -1,0 +1,53 @@
+{
+  "uid" : "6f94817254e0715e",
+  "name" : "And I enter test1234 into password text fields on home screen",
+  "title" : "And I enter test1234 into password text fields on home screen",
+  "time" : {
+    "start" : 1518107487462,
+    "stop" : 1518107487462,
+    "duration" : 0
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 0
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "testId" : null,
+  "suite" : {
+    "uid" : "d40e0255e1b809be",
+    "name" : "Verify Invalid Login",
+    "title" : "Verify Invalid Login"
+  },
+  "steps" : [ ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "Nazmuls-MacBook-Pro.local"
+  }, {
+    "name" : "suite-title",
+    "value" : "Verify Invalid Login"
+  }, {
+    "name" : "language",
+    "value" : "JAVA"
+  }, {
+    "name" : "thread",
+    "value" : "3523@Nazmuls-MacBook-Pro.local.main(1)"
+  }, {
+    "name" : "story",
+    "value" : "Verify Invalid Login"
+  }, {
+    "name" : "suite-name",
+    "value" : "Verify Invalid Login"
+  }, {
+    "name" : "framework",
+    "value" : "CucumberJVM"
+  }, {
+    "name" : "feature",
+    "value" : "Login feature"
+  } ],
+  "parameters" : [ ]
+}
