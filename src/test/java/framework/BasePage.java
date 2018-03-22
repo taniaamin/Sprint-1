@@ -25,7 +25,7 @@ public class BasePage extends SharedSD {
 	// Fluent wait function to be used throughout this class:
 	private static WebElement webAction(final By locator) {
 		Wait<WebDriver> wait = new FluentWait<WebDriver>(SharedSD.getDriver())
-				.withTimeout(15, TimeUnit.SECONDS)
+				.withTimeout(40, TimeUnit.SECONDS)
 				.pollingEvery(1, TimeUnit.SECONDS)
 				.ignoring(NoSuchElementException.class)
 				.ignoring(StaleElementReferenceException.class)
@@ -41,6 +41,8 @@ public class BasePage extends SharedSD {
 
 	public void clickOn(By locator) {
 		webAction(locator).click();
+		//SharedSD.getDriver().findElement(locator).click();
+
 //		try {
 //			SharedSD.getDriver().findElement(locator).click();
 //		} catch (NoSuchElementException e) {
@@ -50,17 +52,21 @@ public class BasePage extends SharedSD {
 	}
 
 	public void sendText(By locator, String text) {
+		webAction(locator).sendKeys(text);
+	}
+
+	public String getTextFromElement(By locator) {
+		String text = null;
 		try {
-			SharedSD.getDriver().findElement(locator).sendKeys(text);
+			text = SharedSD.getDriver().findElement(locator).getText();
 		} catch (NoSuchElementException e) {
 			Assert.fail("Element is not found with this locator: " + locator.toString());
 			e.printStackTrace();
 		}
+
+		return text;
 	}
 
-	public String getTextFromElement(By locator) {
-		return webAction(locator).getText();
-	}
 
 	public void clickOnBrowserBackArrow() {
 		SharedSD.getDriver().navigate().back();
@@ -80,6 +86,7 @@ public class BasePage extends SharedSD {
 	}
 
 	public boolean isEnabled(By locator) {
+		//return SharedSD.getDriver().findElement(locator).isEnabled();
 		return webAction(locator).isEnabled();
 	}
 
@@ -93,16 +100,23 @@ public class BasePage extends SharedSD {
 		Select dropDown = new Select(webAction(locator));
 		dropDown.selectByVisibleText(text);
 	}
-
-	public void selectDropDownByIndex(By locator, int index) {
-		Select dropDown = new Select(webAction(locator));
-		dropDown.selectByIndex(index);
-	}
-
 	public void selectDropDownByValue(By locator, String value) {
 		Select dropDown = new Select(webAction(locator));
 		dropDown.selectByValue(value);
 	}
+	public void selectDropDownByIndex(By locator, int index) throws StaleElementReferenceException{
+		try {
+			Select dropdown = new Select(SharedSD.getDriver().findElement(locator));
+			dropdown.selectByIndex(index);
+		} catch (NoSuchElementException e) {
+			Assert.fail("Element is not found with this locator: " + locator.toString());
+			e.printStackTrace();
+		} catch (StaleElementReferenceException e) {
+			e.printStackTrace();
+		}
+	}
+
+
 
 	//base method for radio button
 	public void selectRadioButton (By locator, String attribute, String index){
@@ -130,34 +144,16 @@ public class BasePage extends SharedSD {
 		}
 	}
 
-	//base method to get tomorrow date from calender
-	public void selectTomorrowFromCalender(By locator) {
-		Date date = new Date();
-		SimpleDateFormat sdf = new SimpleDateFormat("d");
-		Calendar c = Calendar.getInstance();
-		c.add(Calendar.DATE, 1);  // 1 represents tomorrow
-		List<WebElement> days = getDriver().findElements(locator);
-		for (WebElement day : days) {
-			String tomorrow = sdf.format(c.getTime());
-			String expectedDay = day.getText();
-			if (expectedDay.equals(tomorrow)) {
-				day.click();
-				break;
-			}
-		}
-	}
 
-	//base method to get tomorrow date from calender
-	public void selectSixDaysFromCalender(By locator) {
-		Date date = new Date();
+	public void selectDesiredDate(By locator, int dayNumber) {
 		SimpleDateFormat sdf = new SimpleDateFormat("d");
 		Calendar c = Calendar.getInstance();
-		c.add(Calendar.DATE, 6);  // 6 days added from today
-		List<WebElement> days = getDriver().findElements(locator);
+		c.add(Calendar.DATE, dayNumber);  // 0 for today, 1 for tomorrow and so on....
+		String desiredDay = sdf.format(c.getTime());
+		List<WebElement> days = SharedSD.getDriver().findElements(locator);
 		for (WebElement day : days) {
-			String tomorrow = sdf.format(c.getTime());
 			String expectedDay = day.getText();
-			if (expectedDay.equals(tomorrow)) {
+			if (expectedDay.equals(desiredDay)) {
 				day.click();
 				break;
 			}
@@ -215,16 +211,19 @@ public class BasePage extends SharedSD {
 
 
 	// base method for all of alert functionality.
-	public void clickFromAutoCompleteByText(By locator, String string) throws InterruptedException {
-		List<WebElement> list = getDriver().findElements(locator);
-		for (WebElement e : list){
-			if(e.getText().contains(string)){
-				e.click();
-				Thread.sleep(2000);
-				break;
+	public void clickFromAutoCompleteByText(By locator, String string) {
+		try {
+			List<WebElement> list = SharedSD.getDriver().findElements(locator);
+			for (WebElement e : list) {
+				if (e.getText().equals(string)) {
+					e.click();
+					break;
+				}
 			}
+		} catch (NoSuchElementException e) {
+			Assert.fail("Element is not found with this locator: " + locator.toString());
+			e.printStackTrace();
 		}
 	}
-
 
 }

@@ -1,10 +1,11 @@
 framework/BasePage$1.class
 stepdefinition/SharedSD.class
-framework/DarkskyHomePage.class
 util/ConfigReader.class
+framework/TestRunner.class
+framework/HotelsHomePage.class
+framework/HotelsSearchPage.class
+framework/DarkskyHomePage.class
 framework/SauceLab.class
 stepdefinition/DarkskySD.class
 stepdefinition/HotelsSD.class
-framework/TestRunner.class
 framework/BasePage.class
-framework/HotelsHomePage.class

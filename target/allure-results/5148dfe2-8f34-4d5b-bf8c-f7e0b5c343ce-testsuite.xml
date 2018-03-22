@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1521741867391" stop="1521741884761" version="1.4.15" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Verify user is able to successfully search for hotels with desired information provided</name>
+    <title>Verify user is able to successfully search for hotels with desired information provided</title>
+    <test-cases>
+        <test-case start="1521741867446" stop="1521741867450" status="passed">
+            <name>Given I am on home page of Hotels</name>
+            <title>Given I am on home page of Hotels</title>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="tanias-MBP.fios-router.home"/>
+                <label name="thread" value="1292@tanias-MBP.fios-router.home.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1521741868821" stop="1521741868821" status="passed">
+            <name>When I click on Destination field on home screen</name>
+            <title>When I click on Destination field on home screen</title>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="tanias-MBP.fios-router.home"/>
+                <label name="thread" value="1292@tanias-MBP.fios-router.home.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1521741869861" stop="1521741869861" status="passed">
+            <name>And I select 2 Adults and 1 Children of age 5</name>
+            <title>And I select 2 Adults and 1 Children of age 5</title>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="tanias-MBP.fios-router.home"/>
+                <label name="thread" value="1292@tanias-MBP.fios-router.home.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1521741870071" stop="1521741870071" status="passed">
+            <name>And I click on CheckIn field on home screen</name>
+            <title>And I click on CheckIn field on home screen</title>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="tanias-MBP.fios-router.home"/>
+                <label name="thread" value="1292@tanias-MBP.fios-router.home.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1521741871430" stop="1521741871430" status="passed">
+            <name>And I select tomorrow from calendar</name>
+            <title>And I select tomorrow from calendar</title>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="tanias-MBP.fios-router.home"/>
+                <label name="thread" value="1292@tanias-MBP.fios-router.home.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1521741871610" stop="1521741871610" status="passed">
+            <name>And I click on CheckOut field on home screen</name>
+            <title>And I click on CheckOut field on home screen</title>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="tanias-MBP.fios-router.home"/>
+                <label name="thread" value="1292@tanias-MBP.fios-router.home.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1521741872429" stop="1521741872430" status="passed">
+            <name>And I select 6 days forward from calendar</name>
+            <title>And I select 6 days forward from calendar</title>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="tanias-MBP.fios-router.home"/>
+                <label name="thread" value="1292@tanias-MBP.fios-router.home.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1521741875662" stop="1521741875663" status="passed">
+            <name>And I enter orlando into Destination field on home screen</name>
+            <title>And I enter orlando into Destination field on home screen</title>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="tanias-MBP.fios-router.home"/>
+                <label name="thread" value="1292@tanias-MBP.fios-router.home.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1521741875815" stop="1521741875815" status="passed">
+            <name>And I select Orlando, Florida, United States of America from auto suggestion list</name>
+            <title>And I select Orlando, Florida, United States of America from auto suggestion list</title>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="tanias-MBP.fios-router.home"/>
+                <label name="thread" value="1292@tanias-MBP.fios-router.home.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1521741878747" stop="1521741878747" status="passed">
+            <name>And I click on Search field on home screen</name>
+            <title>And I click on Search field on home screen</title>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="tanias-MBP.fios-router.home"/>
+                <label name="thread" value="1292@tanias-MBP.fios-router.home.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1521741880516" stop="1521741880517" status="passed">
+            <name>Then I verify all my information are correct</name>
+            <title>Then I verify all my information are correct</title>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="tanias-MBP.fios-router.home"/>
+                <label name="thread" value="1292@tanias-MBP.fios-router.home.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="story" value="Verify user is able to successfully search for hotels with desired information provided"/>
+        <label name="feature" value="Hotels search feature"/>
+        <label name="framework" value="CucumberJVM"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

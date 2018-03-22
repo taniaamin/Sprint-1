@@ -5,6 +5,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import framework.DarkskyHomePage;
+import org.apache.xalan.xsltc.runtime.InternalRuntimeError;
 import org.testng.Assert;
 import org.testng.asserts.Assertion;
 
@@ -23,22 +24,20 @@ public class DarkskySD {
     public void iAmOnHomePageOfDarksky() {
         Assert.assertEquals(SharedSD.getDriver().getTitle(), "Dark Sky - 260 Broadway, New York City, NY", "Invalid Home Page");
     }
-    @Then("^I verify (days of the week|low temp|high temp) is displayed correctly on home page$")
-    public void verifyCorrectDisplay(String textfield) {
+    @Then("^I verify (days of the week|low and high temp) is displayed correctly on home page$")
+    public void verifyCorrectDisplay(String textfield) throws Exception{
         switch (textfield) {
             case "days of week":
                 DarkskyHomePage.assertForecastDays();
                 break;
-            case "low temp":
-                Assert.assertEquals(DarkskyHomePage.lowTemperature(), DarkskyHomePage.lowTemperatureDisplay(), "Low temperature doesn't match");
-                break;
-            case "high temp":
-                Assert.assertEquals(DarkskyHomePage.highTemperature(), DarkskyHomePage.highTemperatureDisplay(), "High temperature doesn't match");
+            case "low and high temp":
+                Assert.assertEquals(DarkskyHomePage.lowTemperature(), DarkskyHomePage.lowTemperatureDisplay());
+                Assert.assertEquals(DarkskyHomePage.highTemperature(), DarkskyHomePage.highTemperatureDisplay());
                 break;
         }
     }
 
-    @When("^I click on (Time Machine|Today) on home screen$")
+    @When("^I click on (Time Machine|Today Bar) on home screen$")
     public void clickOnBar(String button) {
 
         switch (button) {
@@ -46,25 +45,25 @@ public class DarkskySD {
                 DarkskyHomePage.clickOnTimeMachine();
                 break;
             case "Today":
-                DarkskyHomePage.clickOnToday();
+                DarkskyHomePage.clickOnTodayBar();
                 break;
         }
     }
     @When("^I select (tomorrow) date from calendar$")
-    public void iSelectDate(String textfield){
+    public void iSelectDate(String textfield) throws InterruptedException{
         switch (textfield){
             case "tomorrow's date":
                 DarkskyHomePage.selectTomorrowDate();
                 break;
         }
     }
-    @And("^I verify date selected is displayed in correct format$")
+    @Then("^I verify date selected is displayed in correct format$")
     public void verifyDateFormatDisplay() {
-        Assert.assertEquals(DarkskyHomePage.dateFormatDisplay().replaceAll("(?<=\\d)(st|nd|rd|th)", ""), DarkskyHomePage.selectedDate());
+        Assert.assertEquals(DarkskyHomePage.dateFormatDisplay(), DarkskyHomePage.selectedDate());
     }
     @Then("^I verify selected date is not clickable$")
     public void verifyDateClickable() {
-        Assert.assertEquals(DarkskyHomePage.elementClickable(), "False");
+        DarkskyHomePage.elementClickable();
     }
 
 }

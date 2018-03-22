@@ -13,7 +13,7 @@ import org.junit.runner.RunWith;
         //Path to your feature file
         features = {"src/test/resources/features"},
         // Specify tags to be executed
-        tags = {"@hotels-TA4"}, // "@darksky-TA1" , "@darksky-TA2" , "@darksky-TA3"
+        tags = {"@hotels-TA4"}, // "@darksky-TA1" , "@darksky-TA2" , "@darksky-TA3" , "@hotels-TA4"
         //Specify step definition package name (Note: make sure to have this package on current directory) 
         glue = {"stepdefinition"}
 )

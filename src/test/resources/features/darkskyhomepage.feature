@@ -14,9 +14,8 @@ Scenario: Verify weekly forecast days are displayed correctly
 @darksky-TA2
 Scenario: Verify low to high value is displayed correctly on weekly forecast section
 
-  When  I click on Today on home screen
-  Then I verify low temp is displayed correctly on home page
-  And I verify high temp is displayed correctly on home page
+  When  I click on Today Bar on home screen
+  Then I verify low and high temp is displayed correctly on home page
 
 
 @darksky-TA3

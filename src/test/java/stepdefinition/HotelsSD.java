@@ -23,16 +23,14 @@ public class HotelsSD {
 
     @Given("^I am on home page of Hotels$")
     public void iAmOnHomePageOfHotels() {
+        // HotelsHomePage.clickOnX();
         Assert.assertEquals(SharedSD.getDriver().getTitle(), "Hotels.com - Cheap Hotels, Discount Rates & Hotel Deals", "Invalid Home Page");
     }
 
-    @When("^I go over to popup and close alert$")
-    public void hoverOverOnHomePage() {
-                HotelsHomePage.clickOnX();
-        }
+
 
     @When("^I click on (Destination|CheckIn|CheckOut|Search) field on home screen$")
-    public void clickOn(String field) {
+    public void clickOn(String field) throws InterruptedException {
 
         switch (field) {
             case "Destination":
@@ -49,37 +47,20 @@ public class HotelsSD {
                 break;
         }
     }
-    @When("^I enter (.+) into (Destination) field on home screen$")
-    public void enterDataIntoTextFields(String anyText, String textFields) {
-
-        switch (textFields) {
-            case "Destination":
-                HotelsHomePage.enterDestination(anyText);
-                break;
+    @When("^I enter (orlando) into Destination field on home screen$")
+    public void enterDataIntoTextFields(String destination) throws Exception{
+                HotelsHomePage.enterDestination(destination);
         }
-    }
+
     @When("^I select (.+) from auto suggestion list$")
-    public void selectFromAutoSuggestion(String location) throws InterruptedException {
-        HotelsHomePage.selectFromList(location);
+    public void selectFromAutoSuggestion(String city) throws InterruptedException {
+        HotelsHomePage.selectFromList(city);
     }
-    @When("^I select (.+) from (Rooms|Adults|Children|Child1) dropdown$")
-    public void clickOnField(String dropDown, String text) {
-
-        switch (dropDown) {
-            case "Rooms":
-                HotelsHomePage.selectMoreOptions(text);
-                break;
-            case "Adults":
-                HotelsHomePage.selectAdultCount(text);
-                break;
-            case "Children":
-                HotelsHomePage.selectChildrenCount(text);
-                break;
-            case "Child1":
-                HotelsHomePage.selectChild1Count(text);
-                break;
+    @When("^I select 2 Adults and 1 Children of age 5$")
+    public void selectOption() throws InterruptedException {
+                HotelsHomePage.roomSelection();
         }
-    }
+
     @When("^I select (tomorrow|6 days forward) from calendar$")
     public void chooseDates(String dateSelected) {
 
@@ -94,7 +75,7 @@ public class HotelsSD {
     }
 
     @Then("^I verify all my information are correct$")
-    public void verifyInformation() {
+    public void verifyInformation() throws Exception {
         HotelsSearchPage.verifyAllInformation();
     }
 

@@ -11,10 +11,9 @@ public class HotelsSearchPage extends BasePage {
 
     // Search page locators
     private By displayDate = By.xpath("//*[@class='search-dates']");
-    private By displayLocation = By.xpath("[//*[@id='search']/div[1]/div/h1]");
+    private By displayLocation = By.xpath("//*[@id='search']/div[1]/div/h1");
     private By displayNights = By.xpath("//*[@class='search-nights']");
     private By displayRoomAdultsChild = By.xpath("//*[@class='search-rooms']");
-
 
 
     //methods to get display text as shown in hotels search page
@@ -46,9 +45,9 @@ public class HotelsSearchPage extends BasePage {
 
     //verify all information: actual VS expected
     public void verifyAllInformation() {
-        Assert.assertEquals(displayLocation(), "Vatican City (all)");
         Assert.assertEquals(displayNights(), "5 nights");
+        Assert.assertEquals(displayDateRange().toUpperCase(), selectedDateRange().toUpperCase());
         Assert.assertEquals(displayRoomAdultsChild(), "1 room, 2 adults, 1 child");
-        Assert.assertEquals(displayDateRange().toUpperCase(), selectedDateRange());
+        Assert.assertEquals(displayLocation(), "Orlando, Florida, United States of America");
     }
 }
